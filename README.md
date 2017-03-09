@@ -2,6 +2,26 @@
 一个好用的AlertView
 
 
+## images
+
+
+![](resource/1.png)
+
+![](resource/1.png)
+
+![](resource/3.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Usage
 
