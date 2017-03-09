@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SYAlertView+Add.h"
+#import "SYAlertViewGlobalConfig.h"
 
 @interface ViewController ()
 
@@ -16,14 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [SYAlertViewGlobalConfig syav_setNormalOptBackgroundColor:@"FFFFFF"];
+    [SYAlertViewGlobalConfig syav_setNormalOptHighlightBackgroundColor:@"D7D7D7"];
+    [SYAlertViewGlobalConfig syav_setNormalOptTextColor:@"333333"];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)button0:(id)sender {
+    [SYAlertView showAlertViewWithOptions:@[@"opt1", @"opt2"] withCallback:^(NSInteger index) {
+        
+    }];
 }
 
+- (IBAction)button1:(id)sender {
+    
+    [SYAlertView showAlertViewWithTitle:@"title" withContent:@"content" withOptions:@[@"opt1",@"opt2"] withCallback:^(NSInteger index) {
+        
+    }];
+}
+- (IBAction)button2:(id)sender {
+    [SYAlertView showAlertViewWithTitle:@"title" withContent:@"content" withOptions:@[@"opt1"] withCallback:^(NSInteger index) {
+        
+    }];
+}
+- (IBAction)button3:(id)sender {
+    [SYAlertView showAlertViewWithTitle:@"aaa" withContent:@"" withOptions:@[@"opt1"] isHiddenCancelOption:NO isAlwaysVisible:YES withCallback:^(NSInteger index) {
+        
+    }];
+}
+
+- (IBAction)clear:(id)sender {
+    [SYAlertView closeAllAlertView];
+}
 
 @end
