@@ -5,11 +5,11 @@
 ## images
 
 
-![](resource/1.png)
+![](Resources/1.png)
 
-![](resource/1.png)
+![](Resources/1.png)
 
-![](resource/3.png)
+![](Resources/3.png)
 
 
 
